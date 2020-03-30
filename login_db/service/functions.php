@@ -12,6 +12,15 @@
 		return $user;
 	}
 
+	function usertype($username){
+
+		$con = getConnection();
+		$sql = "select type from users where username='{$username}'";
+		$result = mysqli_query($con, $sql);
+
+		return $result;
+	}
+
 
 	function getAllUsers(){
 		$con = getConnection();
