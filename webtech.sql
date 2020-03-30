@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2020 at 11:32 AM
+-- Generation Time: Mar 30, 2020 at 07:59 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `Id` int(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `type` varchar(50) NOT NULL
+  `Id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `type` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,7 +41,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id`, `username`, `password`, `email`, `type`) VALUES
-(0, 'rafi', '1234', 'rafi@gmail.com', 'admin');
+(3, 'jubair', '1234', 'jubair@gmail.com', 'admin'),
+(4, 'joey', '1234', 'joey@gmail.com', 'user');
 
 --
 -- Indexes for dumped tables
@@ -51,8 +52,17 @@ INSERT INTO `users` (`Id`, `username`, `password`, `email`, `type`) VALUES
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Id` (`Id`);
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
