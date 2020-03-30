@@ -29,4 +29,14 @@
 		return $result;
 	}
 
+	function edit($username,$password,$email,$id){
+
+		$con = getConnection();
+		$sql = "update users set username = '{$username}', password = '{$password}', email='{$email}' where Id='{$id}'";
+		$result = mysqli_query($con, $sql);
+
+		return $result;
+	}
+
+
 ?>
