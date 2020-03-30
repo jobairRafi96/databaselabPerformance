@@ -16,7 +16,8 @@
 
 		if(count($user) > 0 ){
 			$_SESSION['user'] = $user;
-			//echo "test";
+			//$_SESSION['username']=$username;
+		
 			header("location: ../views/home.php");
 		}else{
 			echo "invalid username/password";
